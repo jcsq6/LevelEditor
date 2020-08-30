@@ -5,6 +5,9 @@ FLAGS =
 
 exe : $(EXE_FILE)
 
+debug: FLAGS += -ggdb
+debug : exe
+
 $(EXE_FILE) : $(OBJ_FILES)
 	g++ -o $(EXE_FILE) $(OBJ_FILES) `pkg-config --libs sdl2 SDL2_image SDL2_ttf` $(FLAGS)
 
