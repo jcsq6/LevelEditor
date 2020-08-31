@@ -12,6 +12,8 @@
 #include "bounds.h"
 #include "tinyfiledialogs.h"
 
+#undef main
+
 using json = nlohmann::json;
 
 void drawLines(boundingBox box, SDL_Renderer* renderer);
